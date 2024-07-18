@@ -108,13 +108,24 @@ section.cantaloupe-wrapper img {
   width: 100%;
 }
 section.content {
-  padding: 1.5rem;
-  display: grid;
-  gap: 4rem;
-  grid-template-columns: 1fr 1fr;
+  padding: 1.5rem 6rem;
   margin: 8rem 0;
   align-items: center;
 }
+section.content.col-1 {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 1fr;
+}
+section.content.col-2 {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 1fr 1fr;
+}
+section.content.center {
+  text-align: center;
+}
+
 section.content p {
   position: relative;
   z-index: 2;
@@ -124,68 +135,56 @@ section.content p {
 section.content p span {
   color: var(--quaternary-color);
 }
-section.content ul.listen-links {
+section.content h3 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 300;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+section.content.size-s p {
+  font-size: 2.5rem;
+}
+
+section.content.listen ul {
   display: flex;
   width: 100%;
-  margin-top: 4rem;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 1rem;
 }
-section.content ul.listen-links li {
+section.content.listen ul li {
   display: flex;
 }
-section.content ul.listen-links li a {
+section.content.listen ul li a {
   position: relative;
   top: 0;
   background-color: var(--quaternary-color);
-  padding: 0.7rem 1rem;
+  padding: 0.9rem 1.4rem;
   margin: 0.2rem 1rem;
   border-radius: 6px;
   font-size: 2.5rem;
   cursor: url("../in-love.svg"), auto;
   transition: all 0.3s ease-in-out;
 }
-section.content ul.listen-links li a:hover {
+section.content.listen ul li a:hover {
   top: -7px;
 }
-section.one {
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
-  grid-template-columns: 1fr;
-}
-section.one p {
-  text-align: center;
-  font-size: 5rem;
-}
-section.center p {
-  text-align: center !important;
-}
-.size-s p,
-section.content.size-s p,
-section.content.one.size-s p,
-section.one.size-s p {
-  font-size: 2.5rem;
-}
-section.video {
+
+section.content.video iframe {
   width: 100%;
   height: 800px;
-  grid-template-columns: 1fr;
 }
-section.video iframe {
-  width: 100%;
-  height: inherit;
-}
+
 footer {
   margin: 16rem 2rem 6rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 footer img {
   width: 60%;
 }
-
 footer ul {
   width: 100%;
   display: flex;
@@ -193,15 +192,12 @@ footer ul {
   justify-content: center;
   margin-top: 3rem;
 }
-
 footer ul li {
   padding: 0 1rem;
 }
-
 footer ul li a {
   transition: all 0.3s ease-in-out;
 }
-
 footer ul li a:hover {
   color: var(--terciary-color);
 }
@@ -239,6 +235,24 @@ figcaption span {
   text-decoration: line-through;
 }
 
+@media (max-width: 1024px) {
+  section.content {
+    padding: 1.5rem 2rem;
+  }
+  section.content.col-1,
+  section.content.col-2 {
+    gap: 2.8rem;
+    row-gap: 2rem;
+  }
+  section.content h3 {
+    font-size: 2.8rem;
+    width: 80%;
+  }
+  section.content p {
+    font-size: 2.8rem;
+  }
+}
+
 @media (max-width: 767px) {
   header {
     padding: 1rem;
@@ -259,7 +273,7 @@ figcaption span {
     margin: 0.2rem 0.4rem;
     border-radius: 6px;
     font-size: 1rem;
-    max-width: 100px;
+    max-width: min-content;
   }
   header ul li:last-child {
     margin-right: 0;
@@ -272,49 +286,48 @@ figcaption span {
   }
   section.content {
     padding: 1.5rem;
+    margin: 2.5rem 0;
+    width: 100%;
+  }
+  section.content.col-1,
+  section.content.col-2 {
     gap: 0;
     row-gap: 2rem;
     grid-template-columns: 1fr;
-    margin: 2.5rem 0;
-    width: 100%;
+  }
+  section.content h3 {
+    font-size: 2.2rem;
+    width: 80%;
   }
   section.content p {
     font-size: 1.5rem;
   }
-  section.content ul.listen-links {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 1rem;
-    column-gap: 2rem;
+  section.content.listen ul {
+    display: flex;
     width: 100%;
-    margin-top: 1.5rem;
-    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
-  section.content ul.listen-links li a {
+  section.content.listen ul li a {
     padding: 0.7rem 1rem;
     margin: 0.2rem 1rem;
   }
-  section.content ul.listen-links li a:hover {
+  section.content.listen ul li a:hover {
     top: -3px;
   }
-  section.content.one {
+
+  section.content.video iframe {
     width: 100%;
-    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 600px;
   }
-  section.content.one p {
-    text-align: left;
-    font-size: 2.7rem;
-  }
-  section.video {
-    height: 500px;
-  }
-  section.content.size-s p,
-  section.content.one.size-s p,
-  section.one.size-s p {
+  section.content.size-s p {
     font-size: 1.6rem;
   }
   footer {
-    margin: 10rem 1.5rem 3rem 1.5rem;
+    margin: 8rem 1.5rem 3rem 1.5rem;
   }
   footer img {
     width: 90%;
