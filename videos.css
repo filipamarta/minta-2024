@@ -1,0 +1,29 @@
+/* VIDEOS */
+
+section.content.col-1.center.header-title {
+  gap: 2rem;
+  margin: 3rem 0 2rem 0;
+}
+
+section.content.videos {
+  display: grid;
+  gap: 4rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-rows: 1fr;
+  align-items: flex-start;
+  margin: 1rem 0 4rem 0;
+}
+
+section.content.videos iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+}
+
+section.content.videos h4 {
+  margin-top: 0.8rem;
+  line-height: 1.5;
+}

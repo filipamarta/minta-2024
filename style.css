@@ -122,6 +122,11 @@ section.content.col-2 {
   gap: 4rem;
   grid-template-columns: 1fr 1fr;
 }
+section.content.col-3 {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 section.content.center {
   text-align: center;
 }
