@@ -381,8 +381,8 @@ figcaption span {
     align-items: center;
   }
   header ul li {
-    padding: 0.5rem 0.7rem;
-    margin: 0.2rem 0.4rem;
+    padding: 0.5rem 0.4rem;
+    margin: 0.2rem 0.2rem;
     border-radius: 6px;
     font-size: 1rem;
     max-width: min-content;
