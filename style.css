@@ -5,16 +5,62 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: Bebas Neue;
-  src: url(BebasNeue-Regular.otf);
-}
-
 :root {
-  --primary-color: #4e78a2;
-  --secondary-color: white;
-  --terciary-color: #f7b9a4;
-  --quaternary-color: #b0effe;
+  --color-melon-100: #fdede8;
+  --color-melon-200: #fce5dd;
+  --color-melon-300: #fbdcd1;
+  --color-melon-400: #f9cbbb;
+  --color-melon-500: #f7b9a4ff;
+  --color-melon-600: #d8a290;
+  --color-melon-700: #b98b7b;
+
+  --color-steel-blue-100: #d3dde8;
+  --color-steel-blue-200: #bdccdc;
+  --color-steel-blue-300: #90abc5;
+  --color-steel-blue-400: #7a9ab9;
+  --color-steel-blue-500: #4e78a2ff;
+  --color-steel-blue-600: #44698e;
+  --color-steel-blue-700: #3b5a7a;
+  --color-steel-blue-800: #314b65;
+  --color-steel-blue-900: #273c51;
+
+  --color-bright-pink-crayola-100: #feebef;
+  --color-bright-pink-crayola-200: #fdd7e0;
+  --color-bright-pink-crayola-300: #fcb0c1;
+  --color-bright-pink-crayola-400: #fb89a1;
+  --color-bright-pink-crayola-500: #f96182ff;
+  --color-bright-pink-crayola-600: #bb4962;
+  --color-bright-pink-crayola-700: #9c3d51;
+  --color-bright-pink-crayola-800: #7c3141;
+  --color-bright-pink-crayola-900: #5d2431;
+
+  --color-mustard-100: #fffae9;
+  --color-mustard-200: #fff4d4;
+  --color-mustard-300: #ffeaa9;
+  --color-mustard-400: #ffdf7d;
+  --color-mustard-500: #ffd452ff;
+  --color-mustard-600: #dfba48;
+
+  --color-vivid-sky-blue-100: #d3f2fc;
+  --color-vivid-sky-blue-200: #bdebfa;
+  --color-vivid-sky-blue-300: #92def7;
+  --color-vivid-sky-blue-400: #7cd7f6;
+  --color-vivid-sky-blue-500: #50caf3ff;
+  --color-vivid-sky-blue-600: #46b1d5;
+  --color-vivid-sky-blue-700: #327e98;
+  --color-vivid-sky-blue-800: #286579;
+  --color-vivid-sky-blue-900: #1e4c5b;
+
+  --color-folly-500: #fb4550ff;
+
+  --color-neutral-100: #ffffff;
+  --color-neutral-200: #e0e2e3;
+  --color-neutral-400: #c2c6c7;
+  --color-neutral-500: #a3a9ab;
+  --color-neutral-600: #666f72;
+  --color-neutral-700: #475356;
+  --color-neutral-800: #29363a;
+  --color-neutral-900: #0a191e;
 }
 
 html {
@@ -27,19 +73,14 @@ html {
 }
 
 body {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: var(--color-steel-blue-500);
+  color: var(--color-neutral-100);
 }
 
 img {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
-}
-
-a {
-  color: currentColor;
-  text-decoration: none;
 }
 
 ul {
@@ -50,6 +91,73 @@ ul {
 h1 {
   font-size: 0;
   line-height: 0;
+}
+
+p {
+  line-height: 1.2;
+}
+
+/* LINKS */
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+p a {
+  color: var(--color-vivid-sky-blue-200);
+  position: relative;
+  display: inline-block;
+}
+
+p a:before {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  background-color: var(--color-vivid-sky-blue-200);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+p a:hover::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  background-color: var(--color-vivid-sky-blue-200);
+}
+
+/* PARALLAX EFFECT */
+
+.parallax-effect {
+  width: 100%;
+  background-image: url("banda.jpeg");
+  min-height: 650px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-neutral-100);
+  position: relative;
+  z-index: 2;
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+/* @media only screen and (max-device-width: 1366px) {
+  .parallax-effect {
+    background-attachment: scroll;
+  }
+} */
+
+@media only screen and (max-device-width: 767px) {
+  .parallax-effect {
+    background-size: contain;
+    min-height: 400px;
+  }
 }
 
 header {
@@ -79,7 +187,7 @@ header ul {
 }
 
 header ul li {
-  background-color: var(--primary-color);
+  background-color: var(--color-steel-blue-500);
   padding: 0.7rem 1rem;
   margin: 0.2rem 0.6rem;
   border-radius: 6px;
@@ -87,8 +195,8 @@ header ul li {
 }
 
 header ul li:last-child {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+  background-color: var(--color-neutral-100);
+  color: var(--color-steel-blue-500);
   cursor: url("../in-love.svg"), auto;
   margin-right: 0;
 }
@@ -108,8 +216,7 @@ section.cantaloupe-wrapper img {
   width: 100%;
 }
 section.content {
-  padding: 1.5rem 6rem;
-  margin: 8rem 0;
+  padding: 9.5rem 6rem;
   align-items: center;
 }
 section.content.col-1 {
@@ -138,7 +245,7 @@ section.content p {
   font-weight: 300;
 }
 section.content p span {
-  color: var(--quaternary-color);
+  color: var(--color-vivid-sky-blue-200);
 }
 section.content h3 {
   text-align: center;
@@ -164,7 +271,7 @@ section.content.listen ul li {
 section.content.listen ul li a {
   position: relative;
   top: 0;
-  background-color: var(--quaternary-color);
+  background-color: var(--color-vivid-sky-blue-200);
   padding: 0.9rem 1.4rem;
   margin: 0.2rem 1rem;
   border-radius: 6px;
@@ -182,7 +289,7 @@ section.content.video iframe {
 }
 
 footer {
-  margin: 16rem 2rem 6rem 2rem;
+  padding: 16rem 2rem 6rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -204,7 +311,7 @@ footer ul li a {
   transition: all 0.3s ease-in-out;
 }
 footer ul li a:hover {
-  color: var(--terciary-color);
+  color: var(--color-melon-500);
 }
 footer .credits {
   margin-top: 3.5rem;
@@ -242,7 +349,7 @@ figcaption span {
 
 @media (max-width: 1024px) {
   section.content {
-    padding: 1.5rem 2rem;
+    padding: 6rem 2rem;
   }
   section.content.col-1,
   section.content.col-2 {
@@ -290,8 +397,7 @@ figcaption span {
     margin: 2rem 1rem 1rem 1rem;
   }
   section.content {
-    padding: 1.5rem;
-    margin: 2.5rem 0;
+    padding: 3.5rem 1.5rem;
     width: 100%;
   }
   section.content.col-1,
@@ -332,7 +438,7 @@ figcaption span {
     font-size: 1.6rem;
   }
   footer {
-    margin: 8rem 1.5rem 3rem 1.5rem;
+    padding: 8rem 1.5rem 3rem 1.5rem;
   }
   footer img {
     width: 90%;
