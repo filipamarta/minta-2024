@@ -1,0 +1,163 @@
+/* CHANGE PAGE BACKGROUND-COLOR  */
+body.about,
+.about footer {
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-900);
+  position: relative;
+}
+
+/* CHANGE LOGO SVG BACKGROUND-COLOR  */
+.about .logo img,
+.about footer .minta-and-brook-trout {
+  filter: invert(58%) sepia(60%) saturate(282%) hue-rotate(168deg)
+    brightness(96%) contrast(84%);
+}
+
+/* ALL LINKS WITH A DIFFERENT COLOR */
+.about section:not(.bg-color-3, .bg-color-1, .bg-color-4, .bg-color-5) p a {
+  color: var(--color-vivid-sky-blue-500);
+}
+
+/* CHANGE SECTION BACKGROUND-COLOR  */
+.bg-default {
+  background-color: var(--color-neutral-100);
+}
+.bg-color-1 {
+  background-color: var(--color-bright-pink-crayola-500);
+}
+.bg-color-2 {
+  background-color: var(--color-mustard-500);
+}
+.bg-color-3 {
+  background-color: var(--color-vivid-sky-blue-500);
+}
+.bg-color-4 {
+  background-color: var(--color-folly-500);
+}
+.bg-color-5 {
+  background-color: var(--color-melon-500);
+}
+
+/* MINTA PHOTO ON THE BACK SCROLLING  */
+.about .photo-background {
+  overflow: hidden;
+  height: auto;
+  min-height: 900px;
+}
+
+section.content {
+  isolation: isolate;
+}
+
+.about .photo-background .minta-photo {
+  position: fixed;
+  top: 20%;
+  left: 5%;
+  width: 60%;
+  max-width: 560px;
+  z-index: -2;
+}
+
+.about .photo-background {
+  color: var(--color-bright-pink-crayola-500);
+}
+
+.about .photo-background h3 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  max-width: 900px;
+  position: relative;
+  left: 12%;
+  mix-blend-mode: difference;
+}
+
+.about .photo-background section.content.size-s p {
+  font-size: 3rem;
+}
+
+@media (max-width: 1023px) {
+  .about .photo-background section.content.col-2 {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .about .photo-background .minta-photo {
+    position: fixed;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 82%;
+    max-width: 82%;
+    z-index: -2;
+  }
+
+  .about .photo-background .minta-photo img {
+    position: relative;
+  }
+
+  .about .photo-background .minta-photo::before {
+    content: "";
+    background-color: #ffffff73;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .about .photo-background h3 {
+    width: 100%;
+    left: 0;
+    font-size: 3.5rem;
+    line-height: 1.15;
+  }
+
+  .about .photo-background section.content.col-2 {
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .about .photo-background section.content.size-s p {
+    font-size: 2.2rem;
+    padding-bottom: 5rem;
+    color: var(--color-neutral-900);
+  }
+}
+
+/* ABOUT EACH MUSICIAN */
+
+.about section.content.musician > div h3 {
+  text-align: left;
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 900;
+  width: 100%;
+}
+
+.about section.content.musician > div h4 {
+  font-size: 2.5rem;
+  margin: 6px 0 30px 0;
+  font-weight: 100;
+}
+
+.about section.content.musician > div p {
+  font-size: 1.5rem;
+}
+
+/* CURSORS */
+div.cursors div {
+  position: absolute;
+  left: 300px;
+  top: 300px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-vivid-sky-blue-600);
+  border-radius: 100%;
+  z-index: 10;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
+}
