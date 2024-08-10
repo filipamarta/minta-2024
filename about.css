@@ -169,7 +169,8 @@ div.cursors div {
     font-size: 2rem;
   }
 
-  .about section.content.musician > div p {
+  .about section.content.musician > div p,
+  .about section.content.size-s p {
     font-size: 1.2rem;
   }
 }
