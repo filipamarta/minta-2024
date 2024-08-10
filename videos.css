@@ -3,6 +3,7 @@
 section.content.col-1.center.header-title {
   gap: 2rem;
   margin: 3rem 0 2rem 0;
+  padding: 4rem 6rem 4rem 6rem;
 }
 
 section.content.videos {
@@ -12,6 +13,7 @@ section.content.videos {
   grid-template-rows: 1fr;
   align-items: flex-start;
   margin: 1rem 0 4rem 0;
+  padding: 0 1.5rem 0 1.5rem;
 }
 
 section.content.videos iframe {
@@ -26,4 +28,16 @@ section.content.videos iframe {
 section.content.videos h4 {
   margin-top: 0.8rem;
   line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  section.content.videos {
+    display: grid;
+    gap: 2.5rem 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: flex-start;
+    margin: 0 0 4rem 0;
+    padding: 0 1.5rem 0 1.5rem;
+  }
 }
