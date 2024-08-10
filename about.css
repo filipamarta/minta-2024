@@ -75,57 +75,6 @@ section.content {
   font-size: 3rem;
 }
 
-@media (max-width: 1023px) {
-  .about .photo-background section.content.col-2 {
-    grid-template-columns: 1fr 2fr;
-  }
-}
-
-@media (max-width: 767px) {
-  .about .photo-background .minta-photo {
-    position: fixed;
-    top: 15%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 82%;
-    max-width: 82%;
-    z-index: -2;
-  }
-
-  .about .photo-background .minta-photo img {
-    position: relative;
-  }
-
-  .about .photo-background .minta-photo::before {
-    content: "";
-    background-color: #ffffff73;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-  }
-
-  .about .photo-background h3 {
-    width: 100%;
-    left: 0;
-    font-size: 3.5rem;
-    line-height: 1.15;
-  }
-
-  .about .photo-background section.content.col-2 {
-    grid-template-columns: 1fr;
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .about .photo-background section.content.size-s p {
-    font-size: 2.2rem;
-    padding-bottom: 5rem;
-    color: var(--color-neutral-900);
-  }
-}
-
 /* ABOUT EACH MUSICIAN */
 
 .about section.content.musician > div h3 {
@@ -160,4 +109,67 @@ div.cursors div {
   transform: translate(-50%, -50%);
   mix-blend-mode: difference;
   transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
+}
+
+@media (max-width: 1023px) {
+  .about .photo-background section.content.col-2 {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .about .photo-background .minta-photo {
+    position: fixed;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 82%;
+    max-width: 82%;
+    z-index: -2;
+  }
+
+  .about .photo-background .minta-photo img {
+    position: relative;
+  }
+
+  .about .photo-background .minta-photo::before {
+    content: "";
+    background-color: #ffffff73;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .about .photo-background h3 {
+    width: 100%;
+    left: 0;
+    font-size: 2.5rem;
+    line-height: 1.15;
+  }
+
+  .about .photo-background section.content.col-2 {
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .about .photo-background section.content.size-s p {
+    font-size: 1.9rem;
+    padding-bottom: 5rem;
+    color: var(--color-neutral-900);
+  }
+
+  .about section.content.musician > div h3 {
+    font-size: 2rem;
+  }
+
+  .about section.content.musician > div h4 {
+    font-size: 2rem;
+  }
+
+  .about section.content.musician > div p {
+    font-size: 1.2rem;
+  }
 }
