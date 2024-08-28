@@ -1,6 +1,31 @@
-/* VIDEOS */
+/* CHANGE PAGE BACKGROUND-COLOR  */
+body.videos-page,
+.videos-page footer {
+  background-color: var(--color-mustard-100);
+  color: var(--color-steel-blue-900);
+  position: relative;
+}
 
-section.content.col-1.center.header-title {
+/* CHANGE LOGO SVG BACKGROUND-COLOR  */
+.videos-page .logo img,
+.videos-page footer .minta-and-brook-trout {
+  filter: invert(58%) sepia(60%) saturate(282%) hue-rotate(168deg)
+    brightness(96%) contrast(84%);
+}
+
+.videos-page section.content h1,
+.videos-page section.content h3 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: normal;
+  color: var(--color-steel-blue-900);
+}
+
+/* VIDEOS */
+section.content.header-title {
   gap: 2rem;
   margin: 3rem 0 2rem 0;
   padding: 4rem 6rem;
@@ -31,8 +56,9 @@ section.content.videos h4 {
 }
 
 @media (max-width: 767px) {
-  section.content.col-1.center.header-title {
-    padding: 4rem 2rem;
+  section.content.header-title {
+    margin: 0;
+    padding: 3rem 2rem;
   }
 
   section.content.videos {
@@ -40,5 +66,10 @@ section.content.videos h4 {
     grid-template-columns: 1fr;
     margin: 0 0 4rem 0;
     padding: 0 1.5rem;
+  }
+
+  .videos-page section.content h1,
+  .videos-page section.content h3 {
+    font-size: 2.8rem;
   }
 }

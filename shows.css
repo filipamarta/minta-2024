@@ -1,0 +1,82 @@
+body.shows {
+  min-height: 800px;
+}
+
+/* CHANGE PAGE BACKGROUND-COLOR  */
+body.shows,
+.shows footer {
+  background-color: var(--color-vivid-sky-blue-100);
+  color: var(--color-neutral-900);
+  position: relative;
+}
+
+/* CHANGE LOGO SVG BACKGROUND-COLOR  */
+.shows .logo img,
+.shows footer .minta-and-brook-trout {
+  filter: invert(58%) sepia(60%) saturate(282%) hue-rotate(168deg)
+    brightness(96%) contrast(84%);
+}
+
+/* TEXTS AND TITLES */
+.shows section.content {
+  padding: 6rem 2rem 2rem 2rem;
+}
+
+.shows section.content h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: normal;
+  color: var(--color-steel-blue-900);
+}
+
+.shows section.content > div > h4 {
+  font-size: 2.5rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 100;
+  padding: 0 2rem;
+}
+
+.shows section.content > div p + h4 {
+  font-size: 2.5rem;
+  margin: 4rem 0 1.5rem 0;
+  font-weight: 100;
+  padding: 0 2rem;
+}
+
+.shows section.content > div p {
+  font-size: 1.2rem;
+  margin: 1.2rem 0;
+  padding: 0 2rem;
+}
+
+@media (max-width: 1023px) {
+  .shows section.content > div > h4,
+  .shows section.content > div p + h4,
+  .shows section.content > div p {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .shows figure img {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .shows section.content {
+    padding: 3rem 2rem;
+  }
+
+  .shows section.content:first-of-type {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .shows section.content h1 {
+    font-size: 2.8rem;
+  }
+}

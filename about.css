@@ -1,7 +1,7 @@
 /* CHANGE PAGE BACKGROUND-COLOR  */
 body.about,
 .about footer {
-  background-color: var(--color-neutral-100);
+  background-color: var(--color-melon-200);
   color: var(--color-neutral-900);
   position: relative;
 }
@@ -20,7 +20,7 @@ body.about,
 
 /* CHANGE SECTION BACKGROUND-COLOR  */
 .bg-default {
-  background-color: var(--color-neutral-100);
+  background-color: var(--color-melon-200);
 }
 .bg-color-1 {
   background-color: var(--color-bright-pink-crayola-500);
@@ -95,22 +95,6 @@ section.content {
   font-size: 1.5rem;
 }
 
-/* CURSORS */
-div.cursors div {
-  position: absolute;
-  left: 300px;
-  top: 300px;
-  width: 10px;
-  height: 10px;
-  background-color: var(--color-vivid-sky-blue-600);
-  border-radius: 100%;
-  z-index: 10;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: difference;
-  transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
-}
-
 @media (max-width: 1023px) {
   .about .photo-background section.content.col-2 {
     grid-template-columns: 1fr 2fr;
@@ -140,6 +124,11 @@ div.cursors div {
     height: 100%;
     position: absolute;
     z-index: 1;
+  }
+
+  .about .photo-background .minta-photo figcaption {
+    background-color: var(--color-melon-200);
+    padding-bottom: 4px;
   }
 
   .about .photo-background h3 {

@@ -1,5 +1,6 @@
 const cursorTag = document.querySelector("div.cursors");
 const ball = cursorTag.querySelector("div");
+const iframesList = document.querySelectorAll("iframe");
 
 /* document.addEventListener("mousemove", (event) => {
   ball.style.left = event.pageX + "px";
@@ -40,7 +41,15 @@ if (isNotMobile.matches) {
   const paragraphLinks = document.querySelectorAll("p a");
   const footerLinks = document.querySelectorAll("footer ul li a");
   const headerLinks = document.querySelectorAll("header a");
-  const allLinks = [...paragraphLinks, ...footerLinks, ...headerLinks];
+  /* const iframeLinks = document.querySelectorAll("iframe"); */
+  const albumLinks = document.querySelectorAll("section.music-list a");
+  const allLinks = [
+    ...paragraphLinks,
+    ...footerLinks,
+    ...headerLinks,
+    /* ...iframeLinks, */
+    ...albumLinks,
+  ];
 
   let aimToGoX = 0;
   let aimToGoY = 0;
@@ -56,8 +65,22 @@ if (isNotMobile.matches) {
         eachBall.style.height = 68 + "px";
       });
       link.addEventListener("mouseout", () => {
-        eachBall.style.width = 10 + "px";
-        eachBall.style.height = 10 + "px";
+        eachBall.style.width = 20 + "px";
+        eachBall.style.height = 20 + "px";
+      });
+    });
+
+    iframesList.forEach((frame) => {
+      frame.addEventListener("mouseover", () => {
+        eachBall.style.display = "none";
+      });
+
+      frame.addEventListener("mouseout", () => {
+        eachBall.style.display = "block";
+      });
+
+      frame.addEventListener("mouseleave", () => {
+        eachBall.style.display = "block";
       });
     });
 

@@ -1,0 +1,123 @@
+/* CHANGE PAGE BACKGROUND-COLOR  */
+body.music,
+.music footer {
+  background-color: var(--color-bright-pink-crayola-200);
+  color: var(--color-steel-blue-900);
+  position: relative;
+}
+
+/* CHANGE LOGO SVG BACKGROUND-COLOR  */
+.music .logo img,
+.music footer .minta-and-brook-trout {
+  filter: invert(58%) sepia(60%) saturate(282%) hue-rotate(168deg)
+    brightness(96%) contrast(84%);
+}
+
+/* TEXTS AND TITLES */
+
+.music section.content {
+  padding: 6rem 2rem 2rem 2rem;
+}
+
+.music section.content h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-align: center;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: normal;
+  color: var(--color-steel-blue-900);
+}
+
+/* DISC */
+
+.music section.content.col-3 {
+  display: grid;
+  gap: 0;
+  row-gap: 100px;
+  column-gap: 50px;
+}
+
+.music .music-list .album {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.music .music-list .cover {
+  width: 70%;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.music .music-list .disc {
+  width: 60%;
+  display: flex;
+  position: absolute;
+  right: 0;
+  z-index: 0;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.music .music-list a:hover .cover {
+  box-shadow: 10px 10px lightblue;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.music .music-list a:hover .disc {
+  animation: spin 3s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.music .music-list h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  line-height: normal;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.music .music-list p {
+  font-size: 1rem;
+  text-align: left;
+  line-height: normal;
+}
+
+@media (max-width: 767px) {
+  .music section.content.col-3 {
+    row-gap: 100px;
+    column-gap: 50px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .music section.content {
+    padding: 3rem 2rem;
+  }
+
+  .music section.content:first-of-type {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .music section.content h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .music section.content.col-3 {
+    row-gap: 80px;
+    column-gap: 30px;
+    grid-template-columns: 1fr;
+  }
+}

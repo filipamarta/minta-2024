@@ -70,6 +70,8 @@ export default defineConfig({
         about: resolve(__dirname, "about.html"),
         contact: resolve(__dirname, "contact.html"),
         videos: resolve(__dirname, "videos.html"),
+        shows: resolve(__dirname, "shows.html"),
+        music: resolve(__dirname, "music.html"),
       },
     },
   },
