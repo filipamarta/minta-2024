@@ -205,9 +205,11 @@ header ul {
   align-items: center;
 }
 header ul li {
-  background-color: var(--color-steel-blue-500);
-  padding: 0.5rem 0.8rem;
   margin: 0.2rem 0.3rem;
+}
+header ul li a {
+  background-color: var(--color-steel-blue-500);
+  padding: 0.4rem 0.8rem;
   border-radius: 100px;
   font-size: 1.1rem;
   color: var(--color-neutral-100);
@@ -215,12 +217,13 @@ header ul li {
 header ul li a.selected {
   color: var(--color-vivid-sky-blue-300);
 }
-
 header ul li:last-child {
+  margin-right: 0;
+}
+header ul li:last-child a {
   background-color: var(--color-neutral-100);
   color: var(--color-steel-blue-500);
   cursor: url("../in-love.svg"), auto;
-  margin-right: 0;
 }
 header ul li:last-child a {
   cursor: url("../in-love.svg"), auto;
@@ -274,9 +277,13 @@ header ul li:last-child a {
     width: 100%;
   }
   header.show nav ul li {
+    margin: 0;
+  }
+  header.show nav ul li a {
     width: 60%;
-    margin: 1.2rem auto;
     text-align: center;
+    display: block;
+    margin: 1rem auto;
   }
   header.show nav ul li:last-child {
     margin-top: 2rem;
