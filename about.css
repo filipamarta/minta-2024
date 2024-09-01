@@ -7,7 +7,7 @@ body.about,
 }
 
 /* CHANGE LOGO SVG BACKGROUND-COLOR  */
-.about .logo img,
+.about header:not(.show) nav .logo img,
 .about footer .minta-and-brook-trout {
   filter: invert(58%) sepia(60%) saturate(282%) hue-rotate(168deg)
     brightness(96%) contrast(84%);
