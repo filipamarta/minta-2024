@@ -1,0 +1,71 @@
+/* CHANGE PAGE BACKGROUND-COLOR  */
+body.contact,
+.contact footer {
+  background-color: var(--color-mustard-100);
+  color: var(--color-neutral-900);
+  position: relative;
+}
+
+/* CHANGE LOGO SVG BACKGROUND-COLOR  */
+.contact header:not(.show) nav .logo img,
+.contact footer .minta-and-brook-trout {
+  filter: invert(58%) sepia(60%) saturate(282%) hue-rotate(168deg)
+    brightness(96%) contrast(84%);
+}
+
+/* ALL LINKS WITH A DIFFERENT COLOR */
+.contact section.content p a {
+  color: var(--color-vivid-sky-blue-500);
+}
+
+.contact section.content h2 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: normal;
+  color: var(--color-steel-blue-900);
+}
+
+.contact section.content .general > ul,
+.contact section.content .credits > ul {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.contact section.content .general > ul li,
+.contact section.content .credits > ul li {
+  padding: 1rem 0;
+}
+
+.contact section.content .general h3,
+.contact section.content .credits h3 {
+  text-align: left;
+  font-size: 2.5rem;
+  margin: 0 0 0.8rem 0;
+  font-weight: 100;
+}
+
+.contact section.content .general p,
+.contact section.content .credits p {
+  font-size: 1.5rem;
+  padding: 0.3rem 0;
+}
+
+@media (max-width: 767px) {
+  .contact section.content h2 {
+    font-size: 2.8rem;
+  }
+
+  .contact section.content .general h3,
+  .contact section.content .credits h3 {
+    font-size: 2rem;
+    margin: 0 0 0.4rem 0;
+  }
+
+  .contact section.content .general p,
+  .contact section.content .credits p {
+    font-size: 1.2rem;
+  }
+}
