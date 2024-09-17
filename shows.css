@@ -10,6 +10,10 @@ body.shows,
   position: relative;
 }
 
+body.shows .upcoming {
+  background-color: var(--color-vivid-sky-blue-600);
+}
+
 /* CHANGE LOGO SVG BACKGROUND-COLOR  */
 .shows header:not(.show) nav .logo img,
 .shows footer .minta-and-brook-trout {
