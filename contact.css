@@ -18,8 +18,13 @@ body.contact,
   color: var(--color-vivid-sky-blue-500);
 }
 
+h1 {
+  font-size: 0;
+  line-height: 0;
+}
+
 .contact section.content h2 {
-  font-size: 4.8rem;
+  font-size: clamp(2.8rem, 5vw, 4.8em);
   font-weight: 700;
   text-align: left;
   margin-right: auto;
@@ -42,30 +47,13 @@ body.contact,
 .contact section.content .general h3,
 .contact section.content .credits h3 {
   text-align: left;
-  font-size: 2.5rem;
+  font-size: clamp(2em, 5vw, 2.5em);
   margin: 0 0 0.8rem 0;
   font-weight: 100;
 }
 
 .contact section.content .general p,
 .contact section.content .credits p {
-  font-size: 1.5rem;
+  font-size: clamp(1.2em, 5vw, 1.5em);
   padding: 0.3rem 0;
-}
-
-@media (max-width: 767px) {
-  .contact section.content h2 {
-    font-size: 2.8rem;
-  }
-
-  .contact section.content .general h3,
-  .contact section.content .credits h3 {
-    font-size: 2rem;
-    margin: 0 0 0.4rem 0;
-  }
-
-  .contact section.content .general p,
-  .contact section.content .credits p {
-    font-size: 1.2rem;
-  }
 }

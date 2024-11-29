@@ -27,7 +27,7 @@ body.shows .upcoming {
 }
 
 .shows section.content h1 {
-  font-size: 4.8rem;
+  font-size: clamp(2.8rem, 5vw, 4.8em);
   font-weight: 700;
   text-align: center;
   margin-right: auto;
@@ -37,7 +37,7 @@ body.shows .upcoming {
 }
 
 .shows section.content > div > h4 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
   margin: 0 0 1.5rem 0;
   font-weight: 100;
   padding: 0 2rem;
@@ -78,9 +78,5 @@ body.shows .upcoming {
   .shows section.content:first-of-type {
     padding-top: 2rem;
     padding-bottom: 1rem;
-  }
-
-  .shows section.content h1 {
-    font-size: 2.8rem;
   }
 }

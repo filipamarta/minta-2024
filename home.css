@@ -30,6 +30,11 @@ footer .minta-and-brook-trout {
 }
 
 /* BIG TITLE  */
+h1 {
+  font-size: 0;
+  line-height: 0;
+}
+
 section.big-title-wrapper {
   margin: 4rem 2rem;
   display: flex;

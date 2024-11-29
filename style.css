@@ -70,6 +70,7 @@ html {
   line-height: 1;
   font-optical-sizing: auto;
   font-style: normal;
+  font-size: calc(10px + 0.3vmax);
 }
 
 img {
@@ -83,9 +84,10 @@ ul {
   padding: 0;
 }
 
-h1 {
-  font-size: 0;
-  line-height: 0;
+h1,
+h2,
+h3 {
+  text-wrap: balance;
 }
 
 p {

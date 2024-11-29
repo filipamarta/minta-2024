@@ -73,8 +73,13 @@ section.content {
   color: var(--color-bright-pink-crayola-500);
 }
 
+h1 {
+  font-size: 0;
+  line-height: 0;
+}
+
 .about .photo-background h3 {
-  font-size: 4.8rem;
+  font-size: clamp(2.8rem, 5vw, 4.8em);
   font-weight: 700;
   max-width: 900px;
   position: relative;
@@ -83,27 +88,27 @@ section.content {
 }
 
 .about .photo-background section.content.size-s p {
-  font-size: 3rem;
+  font-size: clamp(1.2em, 5vw, 3em);
 }
 
 /* ABOUT EACH MUSICIAN */
-
+.about section.content.musician > div h3,
+.about section.content.musician > div h4 {
+  font-size: clamp(2rem, 5vw, 2.5em);
+}
 .about section.content.musician > div h3 {
   text-align: left;
-  font-size: 2.5rem;
   margin: 0;
   font-weight: 900;
   width: 100%;
 }
-
 .about section.content.musician > div h4 {
-  font-size: 2.5rem;
   margin: 6px 0 30px 0;
   font-weight: 100;
 }
 
 .about section.content.musician > div p {
-  font-size: 1.5rem;
+  font-size: clamp(1.2em, 5vw, 1.5em);
 }
 
 @media (max-width: 1023px) {
@@ -145,8 +150,6 @@ section.content {
   .about .photo-background h3 {
     width: 100%;
     left: 0;
-    font-size: 2.5rem;
-    line-height: 1.15;
   }
 
   .about .photo-background section.content.col-2 {
@@ -159,18 +162,5 @@ section.content {
     font-size: 1.9rem;
     padding-bottom: 5rem;
     color: var(--color-neutral-900);
-  }
-
-  .about section.content.musician > div h3 {
-    font-size: 2rem;
-  }
-
-  .about section.content.musician > div h4 {
-    font-size: 2rem;
-  }
-
-  .about section.content.musician > div p,
-  .about section.content.size-s p {
-    font-size: 1.2rem;
   }
 }
