@@ -72,11 +72,6 @@ html {
   font-style: normal;
 }
 
-body {
-  background-color: var(--color-steel-blue-500);
-  color: var(--color-neutral-100);
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -134,7 +129,6 @@ p a:hover::before {
 /* PARALLAX EFFECT */
 .parallax-effect {
   width: 100%;
-  background-image: url("banda.jpeg");
   min-height: 650px;
   background-attachment: fixed;
   background-position: center;
@@ -152,27 +146,21 @@ p a:hover::before {
   }
 } */
 
-@media only screen and (max-device-width: 767px) {
-  .parallax-effect {
-    background-size: contain;
-    min-height: 400px;
-  }
-}
 /* END PARALLAX EFFECT */
 /* CURSORS */
 div.cursors div {
   position: absolute;
   left: 300px;
   top: 300px;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   background-color: var(--color-vivid-sky-blue-600);
   border-radius: 100%;
   z-index: 10;
   pointer-events: none;
   transform: translate(-50%, -50%);
   mix-blend-mode: difference;
-  transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 
 @media (max-width: 767px) {
@@ -301,16 +289,6 @@ header ul li:last-child a {
 }
 /*  END MENU HAMBURGER */
 
-section.cantaloupe-wrapper {
-  margin: 4rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-section.cantaloupe-wrapper img {
-  margin: 0 auto;
-  width: 100%;
-}
 section.content {
   padding: 9.5rem 6rem;
   align-items: center;
@@ -334,12 +312,6 @@ section.content.center {
   text-align: center;
 }
 
-section.content p {
-  position: relative;
-  z-index: 2;
-  font-size: 4rem;
-  font-weight: 300;
-}
 section.content p span {
   color: var(--color-vivid-sky-blue-200);
 }
@@ -353,30 +325,6 @@ section.content h3 {
 }
 section.content.size-s p {
   font-size: 2.5rem;
-}
-
-section.content.listen ul {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  gap: 1rem;
-}
-section.content.listen ul li {
-  display: flex;
-}
-section.content.listen ul li a {
-  position: relative;
-  top: 0;
-  background-color: var(--color-vivid-sky-blue-200);
-  padding: 0.9rem 1.4rem;
-  margin: 0.2rem 1rem;
-  border-radius: 6px;
-  font-size: 2.5rem;
-  cursor: url("../in-love.svg"), auto;
-  transition: all 0.3s ease-in-out;
-}
-section.content.listen ul li a:hover {
-  top: -7px;
 }
 
 section.content.video iframe {
@@ -417,24 +365,6 @@ footer .credits {
   gap: 0.8rem;
 }
 
-a.album {
-  cursor: url("../in-love.svg"), auto;
-}
-
-a.album img {
-  transition: all 0.4s cubic-bezier(0.07, -0.01, 0, 0.47);
-  position: relative;
-  top: 0;
-  left: 0;
-  cursor: url("../cantaloupe-icon.svg"), auto;
-}
-
-a.album:hover img {
-  transform: scale(1.4) rotate(15deg);
-  top: 0;
-  left: 100px;
-}
-
 figcaption {
   margin-top: 4px;
   font-size: 0.8rem;
@@ -456,15 +386,9 @@ figcaption span {
     font-size: 2.8rem;
     width: 80%;
   }
-  section.content p {
-    font-size: 2.8rem;
-  }
 }
 
 @media (max-width: 767px) {
-  section.cantaloupe-wrapper {
-    margin: 2rem 1rem 1rem 1rem;
-  }
   section.content {
     padding: 3.5rem 1.5rem;
     width: 100%;
@@ -478,24 +402,6 @@ figcaption span {
   section.content h3 {
     font-size: 2.2rem;
     width: 80%;
-  }
-  section.content p {
-    font-size: 1.5rem;
-  }
-  section.content.listen ul {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  section.content.listen ul li a {
-    padding: 0.7rem 1rem;
-    margin: 0.2rem 1rem;
-  }
-  section.content.listen ul li a:hover {
-    top: -3px;
   }
 
   section.content.video iframe {
@@ -517,9 +423,5 @@ figcaption span {
     grid-template-columns: 1fr 1fr;
     column-gap: 1rem;
     row-gap: 1.2rem;
-  }
-  a.album:hover img {
-    transform: scale(1);
-    left: 0;
   }
 }

@@ -20,16 +20,13 @@ animate(
   { duration: 1, delay: 0 }
 );
 
-animate(
-  "section.content p, section.content img, section.content iframe, section.content.listen ul",
-  {
-    opacity: 0,
-  }
-);
+animate("section.content p, section.content img, section.content iframe", {
+  opacity: 0,
+});
 
 inView("section.content", (info) => {
   animate(
-    info.target.querySelectorAll("p, img, iframe, section.content.listen ul"),
+    info.target.querySelectorAll("p, img, iframe"),
     { opacity: 1 },
     { duration: 1, delay: 0.5 }
   );

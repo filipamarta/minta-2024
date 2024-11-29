@@ -18,6 +18,17 @@ body.about,
   color: var(--color-vivid-sky-blue-500);
 }
 
+/* PARALLAX EFFECT */
+.parallax-effect {
+  background-image: url("banda.jpeg");
+}
+@media only screen and (max-device-width: 767px) {
+  .parallax-effect {
+    background-size: contain;
+    min-height: 400px;
+  }
+}
+
 /* CHANGE SECTION BACKGROUND-COLOR  */
 .bg-default {
   background-color: var(--color-melon-200);

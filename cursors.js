@@ -61,12 +61,12 @@ if (isNotMobile.matches) {
 
     allLinks.forEach((link) => {
       link.addEventListener("mouseover", () => {
-        eachBall.style.width = 68 + "px";
-        eachBall.style.height = 68 + "px";
+        eachBall.style.width = 50 + "px";
+        eachBall.style.height = 50 + "px";
       });
       link.addEventListener("mouseout", () => {
-        eachBall.style.width = 20 + "px";
-        eachBall.style.height = 20 + "px";
+        eachBall.style.width = 16 + "px";
+        eachBall.style.height = 16 + "px";
       });
     });
 

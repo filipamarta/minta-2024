@@ -1,0 +1,131 @@
+/* CHANGE PAGE BACKGROUND-COLOR  */
+body,
+footer {
+  background-color: #f7a790;
+  color: white;
+  position: relative;
+}
+
+/* CHANGE LOGO SVG BACKGROUND-COLOR  */
+header:not(.show) nav .logo img,
+footer .minta-and-brook-trout {
+  filter: invert(58%) sepia(84%) saturate(202%) hue-rotate(168deg)
+    brightness(96%) contrast(84%);
+}
+
+/* PARALLAX EFFECT */
+.parallax-effect {
+  background-image: url("RandomInformation_Capa_FINAL.jpg");
+}
+@media only screen and (max-device-width: 767px) {
+  .parallax-effect {
+    background-size: cover;
+    min-height: 400px;
+  }
+}
+
+/* MIGUEL NAME */
+.miguel {
+  text-decoration: line-through;
+}
+
+/* BIG TITLE  */
+section.big-title-wrapper {
+  margin: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+section.big-title-wrapper img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* SINGLE IMAGES WITH ANIMATIONS AND CURSORS */
+a.album img {
+  transition: all 0.4s cubic-bezier(0.07, -0.01, 0, 0.47);
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: url("../cantaloupe-icon.svg"), auto;
+}
+
+a.album.random-information img {
+  transition: all 0.4s cubic-bezier(0.07, -0.01, 0, 0.47);
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: url("../robot-icon.svg"), auto;
+}
+
+a.album:hover img {
+  transform: scale(1.4) rotate(15deg);
+  top: 0;
+  left: 100px;
+}
+
+/* social media list */
+.social-media ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.social-media ul li a {
+  position: relative;
+  top: 0;
+  cursor: url("../in-love.svg"), auto;
+  transition: all 0.3s ease-in-out;
+  z-index: 0;
+}
+.social-media ul li a:hover {
+  top: -3px;
+}
+
+p {
+  position: relative;
+  z-index: 2;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+p.small {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  p {
+    font-size: 1.4rem;
+  }
+
+  .cantaloupe-video {
+    width: 270px;
+    height: 480px;
+  }
+  a.album {
+    overflow: hidden;
+  }
+  a.album:hover img {
+    transform: scale(1);
+    left: 0;
+  }
+}
