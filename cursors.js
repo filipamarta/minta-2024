@@ -1,7 +1,3 @@
-const cursorTag = document.querySelector("div.cursors");
-const ball = cursorTag.querySelector("div");
-const iframesList = document.querySelectorAll("iframe");
-
 /* document.addEventListener("mousemove", (event) => {
   ball.style.left = event.pageX + "px";
   ball.style.top = event.pageY + "px";
@@ -37,19 +33,12 @@ document.addEventListener("mousemove", (event) => {
 let isNotMobile = window.matchMedia("(min-width: 768px)");
 
 if (isNotMobile.matches) {
+  const cursorTag = document.querySelector("div.cursors");
   const balls = cursorTag.querySelectorAll("div");
-  const paragraphLinks = document.querySelectorAll("p a");
-  const footerLinks = document.querySelectorAll("footer ul li a");
-  const headerLinks = document.querySelectorAll("header a");
-  /* const iframeLinks = document.querySelectorAll("iframe"); */
-  const albumLinks = document.querySelectorAll("section.music-list a");
   const allLinks = [
-    ...paragraphLinks,
-    ...footerLinks,
-    ...headerLinks,
-    /* ...iframeLinks, */
-    ...albumLinks,
+    ...document.querySelectorAll("p a, footer ul li a, section.music-list a"),
   ];
+  const iframesList = document.querySelectorAll("iframe");
 
   let aimToGoX = 0;
   let aimToGoY = 0;
@@ -61,12 +50,12 @@ if (isNotMobile.matches) {
 
     allLinks.forEach((link) => {
       link.addEventListener("mouseover", () => {
-        eachBall.style.width = 50 + "px";
-        eachBall.style.height = 50 + "px";
+        eachBall.style.width = "50px";
+        eachBall.style.height = "50px";
       });
       link.addEventListener("mouseout", () => {
-        eachBall.style.width = 16 + "px";
-        eachBall.style.height = 16 + "px";
+        eachBall.style.width = "16px";
+        eachBall.style.height = "16px";
       });
     });
 

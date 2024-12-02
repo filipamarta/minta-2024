@@ -23,6 +23,10 @@ h1 {
   line-height: 0;
 }
 
+section.content.col-2.general-container {
+  min-height: 100vh;
+}
+
 .contact section.content h2 {
   font-size: clamp(2.8rem, 5vw, 4.8em);
   font-weight: 700;

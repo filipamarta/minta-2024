@@ -1,8 +1,24 @@
 import "./style.css";
-import { animate, inView } from "motion";
+import { animate } from "motion";
 
-let notMobile = window.matchMedia("(min-width: 768px)");
+const headerWithoutShow = document.querySelector("header:not(.show)");
+if (headerWithoutShow) {
+  animate(
+    headerWithoutShow,
+    {
+      y: [-100, 0],
+      opacity: [0, 1],
+    },
+    { duration: 1, delay: 0 }
+  );
+}
 
+// Constants
+const MOBILE_BREAKPOINT = 768;
+
+/* let notMobile = window.matchMedia("(min-width: 768px)"); */
+
+// My DOM Elements
 const menuHeader = document.querySelector("header");
 const menuNav = document.querySelector("header nav");
 const menuNavLogo = document.querySelector("header nav .logo");
@@ -11,66 +27,40 @@ const menuButton = document.querySelector("button.hamburger");
 const menuIconClose = document.querySelector(".menu-close");
 const menuIconOpen = document.querySelector(".menu-open");
 
-animate(
-  "header",
-  {
-    y: [-100, 0],
-    opacity: [0, 1],
-  },
-  { duration: 1, delay: 0 }
-);
+// Functions
+const isMobile = () => window.innerWidth < MOBILE_BREAKPOINT;
 
-animate("section.content p, section.content img, section.content iframe", {
-  opacity: 0,
-});
-
-inView("section.content", (info) => {
-  animate(
-    info.target.querySelectorAll("p, img, iframe"),
-    { opacity: 1 },
-    { duration: 1, delay: 0.5 }
-  );
-});
-
-/* TOGGLE MENU */
-const toggleMenu = () => {
-  if (menuIconClose.style.display === "none") {
-    menuIconOpen.style.display = "none";
-    menuIconClose.style.display = "block";
-    menuLinkElements.style.display = "block";
-    menuHeader.classList.add("show");
-  } else {
-    menuNavLogo.style.display = "block";
+const updateMenuDisplay = () => {
+  if (isMobile()) {
+    menuLinkElements.style.display = "none";
+    menuButton.style.display = "block";
     menuIconOpen.style.display = "block";
     menuIconClose.style.display = "none";
-    menuLinkElements.style.display = "none";
+  } else {
+    menuLinkElements.style.display = "flex";
+    menuButton.style.display = "none";
     menuHeader.classList.remove("show");
   }
 };
 
-if (notMobile.matches) {
+const toggleMenu = () => {
+  const isMenuOpen = menuHeader.classList.toggle("show");
+  menuIconOpen.style.display = isMenuOpen ? "none" : "block";
+  menuIconClose.style.display = isMenuOpen ? "block" : "none";
+  menuLinkElements.style.display = isMenuOpen ? "block" : "none";
+};
+
+// Initial Setup
+updateMenuDisplay();
+
+if (!isMobile()) {
   menuButton.remove();
 } else {
   menuNav.appendChild(menuButton);
   menuIconClose.style.display = "none";
 }
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth >= 768) {
-    menuLinkElements.style.display = "flex";
-    menuButton.style.display = "none";
-  } else {
-    menuButton.style.display = "block";
-    menuIconOpen.style.display = "block";
-    menuLinkElements.style.display = "none";
-    menuIconClose.style.display = "none";
-  }
-});
+// Event Listeners
+menuButton.addEventListener("click", toggleMenu);
 
-menuButton.addEventListener(
-  "click",
-  () => {
-    toggleMenu();
-  },
-  true
-);
+window.addEventListener("resize", updateMenuDisplay);

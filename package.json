@@ -9,12 +9,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "sharp": "^0.33.5",
+    "sharp": "^0.33.4",
     "svgo": "^3.3.2",
-    "vite": "^6.0.1"
+    "vite": "^5.3.1"
   },
   "dependencies": {
-    "motion": "^11.12.0",
+    "lite-youtube-embed": "^0.3.3",
+    "motion": "^10.18.0",
     "vite-plugin-image-optimizer": "^1.1.8"
   }
 }

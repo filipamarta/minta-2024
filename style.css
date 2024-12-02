@@ -219,6 +219,30 @@ header ul li:last-child a {
   cursor: url("../in-love.svg"), auto;
 }
 
+.hidden {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-vivid-sky-blue-500);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: -1;
+}
+
+header.show::before {
+  transform: translateY(0);
+}
+
 @media (max-width: 767px) {
   header {
     padding: 1rem;
@@ -230,6 +254,7 @@ header ul li:last-child a {
     background-color: var(--color-steel-blue-900);
     transition: background-color 0.3s ease-in-out;
     height: 100vh;
+    transform: translateY(-100%);
   }
   header .logo {
     width: 200px;

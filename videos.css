@@ -31,7 +31,7 @@ section.content.header-title {
   padding: 4rem 6rem;
 }
 
-section.content.videos {
+section.content.col-3.videos {
   display: grid;
   gap: 4rem 2rem;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -41,7 +41,7 @@ section.content.videos {
   padding: 0 1.5rem;
 }
 
-section.content.videos iframe {
+section.content.col-3.videos lite-youtube {
   width: 100%;
   height: auto;
   aspect-ratio: 16/9;
@@ -50,7 +50,7 @@ section.content.videos iframe {
   justify-content: center;
 }
 
-section.content.videos h4 {
+section.content.col-3.videos h4 {
   margin-top: 0.8rem;
   line-height: 1.5;
 }
@@ -61,7 +61,7 @@ section.content.videos h4 {
     padding: 3rem 2rem;
   }
 
-  section.content.videos {
+  section.content.col-3.videos {
     gap: 2.5rem 2rem;
     grid-template-columns: 1fr;
     margin: 0 0 4rem 0;
