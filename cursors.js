@@ -36,7 +36,7 @@ if (isNotMobile.matches) {
   const cursorTag = document.querySelector("div.cursors");
   const balls = cursorTag.querySelectorAll("div");
   const allLinks = [
-    ...document.querySelectorAll("p a, footer ul li a, section.music-list a"),
+    ...document.querySelectorAll("p a, footer ul li a, section.music-list a, header nav ul li a, header nav a.logo, div.social-media ul li a, a.album, section.videos div lite-youtube"),
   ];
   const iframesList = document.querySelectorAll("iframe");
 
