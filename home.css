@@ -57,6 +57,13 @@ a.album img {
   cursor: url("../cantaloupe-icon.svg"), auto;
 }
 
+a.album.please-make-room-for-me-please img {
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: url("../house-icon.svg"), auto;
+}
+
 a.album.random-information img {
   transition: all 0.4s cubic-bezier(0.07, -0.01, 0, 0.47);
   position: relative;
