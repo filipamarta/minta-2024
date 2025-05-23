@@ -32,35 +32,32 @@ const isMobile = () => window.innerWidth < MOBILE_BREAKPOINT;
 
 const updateMenuDisplay = () => {
   if (isMobile()) {
-    menuLinkElements.style.display = "none";
+    if (!menuNav.contains(menuButton)) {
+      menuNav.appendChild(menuButton);
+    }
+    // Handle menu visibility based on 'show' class
+    const isMenuOpen = menuHeader.classList.contains("show");
+    menuLinkElements.style.display = isMenuOpen ? "block" : "none";
     menuButton.style.display = "block";
-    menuIconOpen.style.display = "block";
-    menuIconClose.style.display = "none";
+    menuIconOpen.style.display = isMenuOpen ? "none" : "block";
+    menuIconClose.style.display = isMenuOpen ? "block" : "none";
   } else {
     menuLinkElements.style.display = "flex";
     menuButton.style.display = "none";
-    menuHeader.classList.remove("show");
+    menuHeader.classList.remove("show"); // Close menu on desktop
   }
 };
 
 const toggleMenu = () => {
   const isMenuOpen = menuHeader.classList.toggle("show");
+  menuLinkElements.style.display = isMenuOpen ? "block" : "none";
   menuIconOpen.style.display = isMenuOpen ? "none" : "block";
   menuIconClose.style.display = isMenuOpen ? "block" : "none";
-  menuLinkElements.style.display = isMenuOpen ? "block" : "none";
 };
 
 // Initial Setup
 updateMenuDisplay();
 
-if (!isMobile()) {
-  menuButton.remove();
-} else {
-  menuNav.appendChild(menuButton);
-  menuIconClose.style.display = "none";
-}
-
-// Event Listeners
+// Event Listener
 menuButton.addEventListener("click", toggleMenu);
-
 window.addEventListener("resize", updateMenuDisplay);

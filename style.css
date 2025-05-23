@@ -206,7 +206,7 @@ header ul li a {
   transition: padding 0.3s ease-in-out;
 }
 
-header ul li a:hover:not(.selected){
+header ul li a:hover:not(.selected) {
   padding: 0.4rem 1.5rem;
   transition: padding 0.6s ease-in-out;
 }
@@ -317,6 +317,9 @@ header.show::before {
 }
 /* END HEADER */
 /* MENU HAMBURGER */
+.hamburger {
+  display: none;
+}
 
 .hamburger .menu-close {
   display: none;
