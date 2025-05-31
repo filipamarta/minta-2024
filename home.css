@@ -23,6 +23,15 @@ footer .minta-and-brook-trout {
     min-height: 400px;
   }
 }
+.picture.parallax-effect {
+  background-image: url("20250415 027 cred_VeraMarmelo1.jpg");
+}
+@media only screen and (max-device-width: 767px) {
+  .parallax-effect {
+    background-size: cover;
+    min-height: 400px;
+  }
+}
 
 /* MIGUEL NAME */
 .miguel {
