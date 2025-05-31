@@ -27,9 +27,9 @@ footer .minta-and-brook-trout {
   background-image: url("20250415 027 cred_VeraMarmelo1.jpg");
 }
 @media only screen and (max-device-width: 767px) {
-  .parallax-effect {
+  .picture.parallax-effect {
     background-size: cover;
-    min-height: 400px;
+    min-height: 300px;
   }
 }
 
