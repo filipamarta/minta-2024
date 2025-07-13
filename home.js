@@ -15,7 +15,16 @@ animate(
     y: [-100, 0],
     opacity: [0, 1],
   },
-  { duration: 1, delay: 0.8 }
+  { duration: 0.9, delay: 0.8 }
+);
+
+animate(
+  ".stretch-title",
+  {
+    y: [0, 0],
+    opacity: [0, 1],
+  },
+  { duration: 1, delay: 0.95 }
 );
 
 animate(
