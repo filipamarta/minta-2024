@@ -208,4 +208,10 @@ p.small {
     height: 100px;
     margin-top: 6px;
   }
+
+  .homepage-video,
+  .video.parallax-effect iframe.homepage-video {
+    width: 100%;
+    height: 300px;
+  }
 }
