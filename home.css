@@ -21,6 +21,9 @@ footer .minta-and-brook-trout {
   .parallax-effect {
     background-size: cover;
     min-height: 400px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    transform: translateZ(0);
   }
 }
 .picture.parallax-effect {
@@ -29,7 +32,16 @@ footer .minta-and-brook-trout {
 @media only screen and (max-device-width: 767px) {
   .picture.parallax-effect {
     background-size: cover;
-    min-height: 300px;
+    min-height: unset;
+    background-position: right bottom;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    transform: translateZ(0);
   }
 }
 
@@ -68,10 +80,10 @@ section.big-title-wrapper img {
 }
 
 #STRETCH-parent > svg {
-  overflow: visible;
+  overflow-x: hidden;
   overflow-clip-margin: unset;
   margin: 0;
-  height: 100%;
+  width: 100%;
 }
 
 #stretch-text {
@@ -79,11 +91,13 @@ section.big-title-wrapper img {
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   font-style: italic;
-  font-size: clamp(3rem, 10vw, 8rem);
+  font-size: clamp(7rem, 6vw, 8rem);
   fill: white;
   letter-spacing: 0;
   transform-origin: left center;
   animation: stretchFromLeft 4s ease-in-out infinite alternate;
+  will-change: letter-spacing, transform;
+  transform: translateZ(0);
 }
 
 @keyframes stretchFromLeft {
