@@ -345,6 +345,11 @@ section.content.col-3 {
   gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
 }
+section.content.col-2-1 {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 2fr 1fr;
+}
 section.content.center {
   text-align: center;
 }
@@ -419,6 +424,11 @@ figcaption span {
     gap: 2.8rem;
     row-gap: 2rem;
   }
+  section.content.col-2-1 {
+    display: grid;
+    gap: 2.8rem;
+    grid-template-columns: 1fr 1fr;
+  }
   section.content h3 {
     font-size: 2.8rem;
     width: 80%;
@@ -440,7 +450,6 @@ figcaption span {
     font-size: 2.2rem;
     width: 80%;
   }
-
   section.content.video iframe {
     width: 100%;
     height: auto;
@@ -460,5 +469,16 @@ figcaption span {
     grid-template-columns: 1fr 1fr;
     column-gap: 1rem;
     row-gap: 1.2rem;
+  }
+  footer ul li {
+    justify-content: center;
+    display: flex;
+  }
+}
+@media (max-width: 567px) {
+  section.content.col-2-1 {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr;
   }
 }

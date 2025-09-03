@@ -1,9 +1,25 @@
 /* CHANGE PAGE BACKGROUND-COLOR  */
 body,
 footer {
-  background-color: #f7a790;
-  color: white;
+  background-color: #f5d225;
+  color: rgb(51, 47, 47);
   position: relative;
+}
+
+/* LINKS */
+.home p a {
+  color: #2598e8;
+}
+
+.home p a:before {
+  content: "";
+  background-color: #2598e8;
+}
+
+.home p a:hover::before {
+  content: "";
+
+  background-color: #2598e8;
 }
 
 /* CHANGE LOGO SVG BACKGROUND-COLOR  */
@@ -46,8 +62,9 @@ footer .minta-and-brook-trout {
 }
 
 /* MIGUEL NAME */
-.miguel {
+section.content p span.miguel {
   text-decoration: line-through;
+  color: rgb(51, 47, 47);
 }
 
 /* BIG TITLE  */
@@ -55,20 +72,16 @@ h1 {
   font-size: 0;
   line-height: 0;
 }
-
 section.big-title-wrapper {
-  margin: 0.1rem 2rem 2rem 2rem;
+  margin: 0.1rem 2rem 4rem 2rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  gap: 30px;
+  gap: 0px;
+  min-height: 1px;
 }
 section.big-title-wrapper img {
-  margin: 0 auto;
   width: 100%;
 }
-
 #STRETCH-parent {
   width: 100%;
   height: 130px;
@@ -78,28 +91,24 @@ section.big-title-wrapper img {
   overflow: visible;
   margin-top: 20px;
 }
-
 #STRETCH-parent > svg {
   overflow-x: hidden;
   overflow-clip-margin: unset;
   margin: 0;
   width: 100%;
 }
-
 #stretch-text {
-  font-family: "Outfit", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Outfit", sans-serif;
   font-style: italic;
-  font-size: clamp(7rem, 6vw, 8rem);
+  font-size: clamp(5rem, 10vw, 2rem);
   fill: white;
   letter-spacing: 0;
   transform-origin: left center;
   animation: stretchFromLeft 4s ease-in-out infinite alternate;
   will-change: letter-spacing, transform;
   transform: translateZ(0);
+  width: 60%;
 }
-
 @keyframes stretchFromLeft {
   0% {
     letter-spacing: 0;
@@ -107,7 +116,7 @@ section.big-title-wrapper img {
   }
   100% {
     letter-spacing: 0.5em;
-    transform: scaleX(1.05); /* subtle extra stretch */
+    transform: scaleX(0.9); /* subtle extra stretch */
   }
 }
 
@@ -117,22 +126,7 @@ a.album img {
   position: relative;
   top: 0;
   left: 0;
-  cursor: url("../cantaloupe-icon.svg"), auto;
-}
-
-a.album.please-make-room-for-me-please img {
-  position: relative;
-  top: 0;
-  left: 0;
-  cursor: url("../house-icon.svg"), auto;
-}
-
-a.album.random-information img {
-  transition: all 0.4s cubic-bezier(0.07, -0.01, 0, 0.47);
-  position: relative;
-  top: 0;
-  left: 0;
-  cursor: url("../robot-icon.svg"), auto;
+  cursor: url("../icon-sun.svg"), auto;
 }
 
 a.album:hover img {
@@ -162,16 +156,93 @@ a.album:hover img {
   top: -3px;
 }
 
+/* images wrappers */
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-center {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-center iframe {
+  margin: 0 auto;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+
+.img-wrapper-xs {
+  width: 100px;
+}
+
+.img-wrapper-sm {
+  width: 200px;
+}
+
+.img-wrapper-md {
+  width: 300px;
+}
+
+.img-wrapper-lg {
+  width: 400px;
+}
+
+@media only screen and (max-device-width: 567px) {
+  .img-wrapper-lg,
+  .img-wrapper-md,
+  .img-wrapper-xs {
+    width: 100%;
+  }
+}
+
+/* stretch mockups */
+
+.stretch-mockups {
+  width: 100%;
+  display: flex;
+  gap: 140px;
+}
+
+.stretch-mockups img {
+  width: 100%;
+  height: auto;
+}
+
+.stretch-band p {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  margin: 0.8rem 0;
+}
+
+.stretch-credits {
+  width: 70%;
+  margin: 40px auto 80px auto;
+}
+
 p {
   position: relative;
   z-index: 2;
   font-size: 2rem;
-  font-weight: 300;
 }
 
 p.small {
   position: relative;
-  font-size: 0.8rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
   font-weight: 300;
 }
 
@@ -184,6 +255,26 @@ p.small {
 @media (max-width: 1024px) {
   p {
     font-size: 1.1rem;
+  }
+
+  a.album img {
+    transition: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: url("../icon-sun.svg"), auto;
+  }
+
+  a.album:hover img {
+    transform: none;
+    top: 0;
+    left: 0;
+  }
+
+  .stretch-mockups {
+    width: 100%;
+    display: flex;
+    gap: 20px;
   }
 }
 
@@ -200,18 +291,25 @@ p.small {
     overflow: hidden;
   }
   a.album:hover img {
-    transform: scale(1);
+    transform: none;
     left: 0;
+    width: 100%;
   }
   #STRETCH-parent {
     width: 100%;
     height: 100px;
     margin-top: 6px;
   }
-
+  #stretch-text {
+    font-size: clamp(8rem, 1vw, 10rem);
+    width: 100%;
+  }
   .homepage-video,
   .video.parallax-effect iframe.homepage-video {
     width: 100%;
     height: 300px;
+  }
+  .stretch-credits {
+    width: 100%;
   }
 }

@@ -1,9 +1,9 @@
 import { animate, inView } from "motion";
 
 animate(
-  ".big-title",
+  ".stretch-title",
   {
-    y: [-100, 0],
+    y: [0, 0],
     opacity: [0, 1],
   },
   { duration: 0.5, delay: 0.5 }
@@ -16,15 +16,6 @@ animate(
     opacity: [0, 1],
   },
   { duration: 0.9, delay: 0.8 }
-);
-
-animate(
-  ".stretch-title",
-  {
-    y: [0, 0],
-    opacity: [0, 1],
-  },
-  { duration: 1, delay: 0.95 }
 );
 
 animate(
