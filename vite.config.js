@@ -72,6 +72,7 @@ export default defineConfig({
         videos: resolve(__dirname, "videos.html"),
         shows: resolve(__dirname, "shows.html"),
         music: resolve(__dirname, "music.html"),
+        lyrics: resolve(__dirname, "lyrics.html"),
       },
     },
   },
