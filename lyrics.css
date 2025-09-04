@@ -1,0 +1,95 @@
+/* CHANGE PAGE BACKGROUND-COLOR  */
+body.lyrics,
+.lyrics footer {
+  background-color: var(--color-bright-pink-crayola-300);
+  color: var(--color-neutral-900);
+  position: relative;
+}
+
+/* CHANGE LOGO SVG BACKGROUND-COLOR  */
+.lyrics header:not(.show) nav .logo img,
+.lyrics footer .minta-and-brook-trout {
+  filter: invert(58%) sepia(60%) saturate(282%) hue-rotate(168deg)
+    brightness(96%) contrast(84%);
+}
+
+/* ALL LINKS WITH A DIFFERENT COLOR */
+.lyrics section.content p a {
+  color: var(--color-mustard-500);
+}
+
+h1 {
+  font-size: 0;
+  line-height: 0;
+}
+
+p {
+  font-size: clamp(1.2rem, 2vw, 1.3rem);
+  color: var(--color-neutral-900);
+}
+
+.lyrics section.content {
+  padding: 4rem 6rem;
+  align-items: center;
+}
+
+/* LYRICS INTRO */
+.lyrics .lyrics-intro h3 {
+  margin-bottom: 3.5rem;
+  color: var(--color-steel-blue-900);
+}
+
+.lyrics .lyrics-intro p {
+  font-size: clamp(1.8rem, 5vw, 1.1em);
+  color: var(--color-steel-blue-900);
+  margin: 0.8rem auto;
+  width: 90%;
+}
+
+@media (max-width: 567px) {
+  .lyrics .lyrics-intro p {
+    font-size: clamp(1.5rem, 5vw, 1em);
+    width: 100%;
+  }
+}
+
+/* LYRICS WRAPPER */
+
+.lyrics .lyrics-wrapper h2 {
+  font-size: clamp(3rem, 5vw, 2.5em);
+  font-weight: 700;
+  text-align: left;
+  margin: 0 0 2rem 0;
+  color: var(--color-steel-blue-900);
+}
+
+.lyrics .lyrics-wrapper h3 {
+  font-size: clamp(1.3rem, 5vw, 1.2em);
+  font-weight: 700;
+  text-align: left;
+  line-height: normal;
+  margin: 0 0 1rem 0;
+  color: var(--color-steel-blue-900);
+}
+
+.lyrics .lyrics-wrapper ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 767px) {
+  .lyrics .lyrics-wrapper ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 567px) {
+  .lyrics .lyrics-wrapper ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
