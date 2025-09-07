@@ -1,7 +1,7 @@
 /* CHANGE PAGE BACKGROUND-COLOR  */
 body.lyrics,
 .lyrics footer {
-  background-color: var(--color-bright-pink-crayola-300);
+  background-color: white;
   color: var(--color-neutral-900);
   position: relative;
 }
@@ -33,6 +33,13 @@ p {
   align-items: center;
 }
 
+@media (max-width: 767px) {
+  .lyrics section.content {
+    padding: 3.5rem 1.5rem;
+    width: 100%;
+  }
+}
+
 /* LYRICS INTRO */
 .lyrics .lyrics-intro h3 {
   margin-bottom: 3.5rem;
@@ -43,7 +50,12 @@ p {
   font-size: clamp(1.8rem, 5vw, 1.1em);
   color: var(--color-steel-blue-900);
   margin: 0.8rem auto;
-  width: 90%;
+  width: 80%;
+}
+
+.lyrics .lyrics-intro p.small {
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  color: var(--color-neutral-900);
 }
 
 @media (max-width: 567px) {
@@ -59,7 +71,7 @@ p {
   font-size: clamp(3rem, 5vw, 2.5em);
   font-weight: 700;
   text-align: left;
-  margin: 0 0 2rem 0;
+  margin: 0 0 3rem 0;
   color: var(--color-steel-blue-900);
 }
 
@@ -78,11 +90,10 @@ p {
   gap: 40px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .lyrics .lyrics-wrapper ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
   }
 }
 
@@ -90,6 +101,62 @@ p {
   .lyrics .lyrics-wrapper ul {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 40px;
   }
+}
+
+/* ALBUMS */
+
+.album-you {
+  background-color: #cd5a01;
+}
+
+.album-minta {
+  background-color: #ffffff;
+}
+
+.album-olympia {
+  background-color: #478e92;
+}
+
+.album-slow {
+  background-color: #cc6760;
+}
+
+.album-row {
+  background-color: #dddddd;
+}
+
+.album-demolition {
+  background-color: #f06885;
+}
+
+.album-stretch {
+  background-color: #f5d225;
+}
+
+.album-you h2,
+.album-you h3,
+.album-you p,
+.album-olympia h2,
+.album-olympia h3,
+.album-olympia p,
+.album-slow h2,
+.album-slow h3,
+.album-slow p,
+.album-demolition h2,
+.album-demolition h3,
+.album-demolition p {
+  color: white !important;
+}
+
+.album-minta h2,
+.album-minta h3,
+.album-minta p,
+.album-row h2,
+.album-row h3,
+.album-row p,
+.album-stretch h2,
+.album-stretch h3,
+.album-stretch p {
+  color: rgb(62, 55, 55) !important;
 }
