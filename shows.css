@@ -10,8 +10,11 @@ body.shows,
   position: relative;
 }
 
-body.shows .upcoming {
-  background-color: var(--color-vivid-sky-blue-600);
+body.shows section.content.upcoming {
+  background-color: var(--color-bright-pink-crayola-400);
+  padding: 3rem;
+  margin: 4rem 0 0 0;
+  color: var(--color-neutral-100);
 }
 
 /* CHANGE LOGO SVG BACKGROUND-COLOR  */
@@ -77,10 +80,5 @@ body.shows .upcoming {
 
   .shows section.content {
     padding: 3rem 2rem;
-  }
-
-  .shows section.content:first-of-type {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
   }
 }

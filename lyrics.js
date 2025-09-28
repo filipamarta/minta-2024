@@ -6,7 +6,7 @@ animate(
     y: [-100, 0],
     opacity: [0, 1],
   },
-  { duration: 0.4, delay: 0 }
+  { duration: 0.6, delay: 0 }
 );
 
 animate(
