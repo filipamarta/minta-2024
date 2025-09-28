@@ -240,7 +240,7 @@ header::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-vivid-sky-blue-500);
+  background-color: var(--color-bright-pink-crayola-400);
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
   z-index: -1;
@@ -305,7 +305,10 @@ header.show::before {
     width: 60%;
     text-align: center;
     display: block;
-    margin: 1rem auto;
+    margin: 1.3rem auto;
+    background-color: transparent;
+    font-size: 2.6rem;
+    border-radius: 0px;
   }
   header.show nav ul li:last-child {
     margin-top: 2rem;

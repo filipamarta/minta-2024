@@ -56,6 +56,10 @@ body.shows .upcoming {
   padding: 0 2rem;
 }
 
+.shows section.content.upcoming > div p {
+  font-size: clamp(2rem, 2vw, 3rem);
+}
+
 @media (max-width: 1023px) {
   .shows section.content > div > h4,
   .shows section.content > div p + h4,
