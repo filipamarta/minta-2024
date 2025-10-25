@@ -82,3 +82,59 @@ body.shows section.content.upcoming {
     padding: 3rem 2rem;
   }
 }
+
+/* BANDSINTOWN WIDGET */
+
+#bit-widget-custom li.event {
+  border-top: 1px solid var(--color-vivid-sky-blue-500);
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#bit-widget-custom li.event:hover {
+  background-color: var(--color-bright-pink-crayola-300);
+  transition: background-color 0.3s ease-in-out;
+}
+
+#bit-widget-custom li.event .event-date {
+  font-weight: 300;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+#bit-widget-custom li.event .event-venue {
+  font-size: 1.6rem;
+}
+#bit-widget-custom li.event .event-location {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+#bit-widget-custom li.event .event-lineup {
+  font-size: 1.3rem;
+}
+
+#bit-widget-custom li.event .event-tickets a.tickets {
+  border: 2px solid var(--color-vivid-sky-blue-500);
+  border-radius: 100%;
+  color: var(--color-neutral-100);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.4rem;
+}
+
+#bit-widget-custom li.no-shows {
+  border: 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 300;
+}
