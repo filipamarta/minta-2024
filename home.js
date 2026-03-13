@@ -32,3 +32,21 @@ inView("section.content", (info) => {
     { duration: 1, delay: 0.5 }
   );
 });
+
+inView(
+  ".tour-canada-posters-list",
+  (info) => {
+    const tourListImages = info.target.querySelectorAll("img");
+    tourListImages.forEach((image, index) => {
+      animate(
+        image,
+        {
+          y: [-200, 0],
+          opacity: [0, 1],
+        },
+        { duration: 1, delay: index * 0.5 }
+      );
+    });
+  },
+  { margin: "-10% 0px" }
+); // Optional: triggers a bit before fully in view

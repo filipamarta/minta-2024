@@ -67,6 +67,17 @@ section.content p span.miguel {
   color: rgb(51, 47, 47);
 }
 
+/* TOUR CANADA */
+section.content.tour-canada {
+  padding: 2rem 1rem;
+}
+
+.tour-canada-posters-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 6px;
+}
+
 /* BIG TITLE  */
 h1 {
   font-size: 0;
