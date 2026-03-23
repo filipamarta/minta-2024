@@ -6,7 +6,7 @@ animate(
     y: [-100, -10],
     opacity: [0, 1],
   },
-  { duration: 0.6, delay: 0 }
+  { duration: 0.6, delay: 0 },
 );
 
 animate(
@@ -15,26 +15,29 @@ animate(
     y: [-100, -10],
     opacity: [0, 1],
   },
-  { duration: 0.6, delay: 0.6 }
+  { duration: 0.6, delay: 0.6 },
 );
 
 const artist = "minta & the brook trout";
 const appId = "c6fbf486cfb1cbda49cb30e03419e250";
 const apiURL = `https://rest.bandsintown.com/artists/${encodeURIComponent(
-  artist
+  artist,
 )}/events?app_id=${appId}&date=upcoming`;
 
 async function loadConcerts() {
+  const widget = document.getElementById("bit-widget-custom");
+
+  // Show loader
+  widget.innerHTML = `<li class="loading"><div>Loading upcoming shows...</div></li>`;
+
   try {
     const response = await fetch(apiURL);
     const data = await response.json();
 
-    console.log("data", data);
-
     if (!Array.isArray(data) || data.length === 0) {
-      document.getElementById("bit-widget-custom").innerHTML = `
+      widget.innerHTML = `
       <li class="no-shows">
-        <div>there are no upcoming concerts at the moment </div>
+        <div>there are no upcoming shows at the moment </div>
       </li>`;
       return;
     }
@@ -53,7 +56,7 @@ async function loadConcerts() {
         const eventDescription = event.description || "";
         const lineup = event.lineup?.join(" + ") || "";
 
-        const structure = `
+        return `
             <li class="event">
               <div class="event-info">
                 <div class="event-date">${date}</div>
@@ -67,19 +70,14 @@ async function loadConcerts() {
               </div>
             </li>
           `;
-
-        return (document.getElementById("bit-widget-custom").innerHTML =
-          structure);
       })
       .join("");
 
-    document.getElementById("bit-widget-custom").innerHTML = html;
+    widget.innerHTML = html;
   } catch (error) {
-    console.error(error);
-
-    document.getElementById("bit-widget-custom").innerHTML = `
+    widget.innerHTML = `
       <li class="no-shows">
-        <div>there are no upcoming concerts at the moment </div>
+        <div>there are no upcoming shows at the moment </div>
       </li>`;
   }
 }

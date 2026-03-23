@@ -131,10 +131,12 @@ body.shows section.content.upcoming {
   font-size: 1.4rem;
 }
 
-#bit-widget-custom li.no-shows {
+#bit-widget-custom li.no-shows,
+#bit-widget-custom li.loading {
   border: 0;
   text-align: center;
   font-size: 1.8rem;
   font-style: italic;
   font-weight: 300;
+  padding: 200px 0;
 }
