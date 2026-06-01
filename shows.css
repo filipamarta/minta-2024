@@ -59,6 +59,10 @@ body.shows section.content.upcoming {
   padding: 0 2rem;
 }
 
+.shows section.content a {
+  color: var(--color-bright-pink-crayola-400);
+}
+
 .shows section.content.upcoming > div p {
   font-size: clamp(2rem, 2vw, 3rem);
 }
